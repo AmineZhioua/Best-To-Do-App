@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/33f8496b80.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>To-Do App | Home</title>
+</head>
+<body>
+    <!-- Start Main Content -->
+    <div class="background" id="background">
+        <div class="container">
+            <div class="main-text">
+                <h2>Welcome!</h2>
+                <p>This is the best simple To-Do App you will use in terms of User-Experience.</p>
+                <h3>Enjoy Your Experience.</h3>
+            </div>
+            <div class="user-info">
+                <input type="text" id="username" placeholder="Enter Your Username...">
+                <button type="submit" id="confirmBtn">Confirm</button>
+            </div>
+        </div>
+
+        <!-- Start Side Toolbar Section -->
+        <div class="customing slideLeft" id="toolbar">
+            <div class="title" id="toolbarBtn">
+                <p>Customisation</p>
+                <i class="fa-solid fa-caret-down"></i>
+            </div>
+            <div class="colors show" id="colorsTab">
+                <p>Choose a color:</p>
+                <div class="colors-table">
+                    <span class="color red" data-value="#eb2632"></span>
+                    <span class="color pink" data-value="#f70776"></span>
+                    <span class="color purple" data-value="#6643b5"></span>
+                    <span class="color orange" data-value="#f96d00"></span>
+                    <span class="color green" data-value="#4ef037"></span>
+                    <span class="color blue" data-value="#0075ff"></span>
+                    <span class="color yellow" data-value="#ffc93c"></span>
+                    <span class="color turq" data-value="#35bcbf"></span>
+                </div>
+            </div>
+        </div>
+        <!-- End Side Toolbar Section -->
+
+        <!-- Start Waves Animation Section -->
+        <div class="waves">
+            <div class="wave" id="wave1"></div>
+            <div class="wave" id="wave2"></div>
+            <div class="wave" id="wave3"></div>
+            <div class="wave" id="wave4"></div>
+        </div>
+        <!-- End Waves Animation Section -->
+    </div>
+    <!-- End Main Content -->
+    <script src="scripts/main.js"></script>
+    <script src="scripts/utils.js"></script>
+</body>
+</html>

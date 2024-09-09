@@ -1,0 +1,342 @@
+/* Start Global Rules */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Cairo", sans-serif;
+}
+
+.container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Small Screen */
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+/* Medium Screen */
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+/* Large Screen */
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+:root {
+    --before-bg-color: #0075ff; /* Define the variable */
+}
+/* End Global Rules */
+
+
+
+/* #################### Start Main Content Styling #################### */
+/* Start Background Styling */
+.background {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    background-image: url('../assets/background-pattern.jpg');
+    background-size: cover;
+    overflow: hidden;
+}
+
+.background::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: var(--before-bg-color, #eb2632);
+    opacity: 95%;
+}
+/* End Background Styling */
+
+/* Main Text Styling */
+.background .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+}
+
+.background .container .main-text {
+    position: absolute;
+    top: 10%;
+    text-align: center;
+    color: white;
+    padding: 10px;
+    z-index: 1;
+}
+
+.background .container .main-text h2 {
+    font-size: 35px;
+}
+
+.background .container .main-text p {
+    font-size: 17px;
+    margin: 10px 0;
+    letter-spacing: 1.2px;
+}
+
+.background .container .main-text h3 {
+    font-size: 32px;
+}
+
+/* Input & Button Styling */
+.background .container .user-info {
+    margin-top: 20px;
+    position: relative;
+    top: 10%;
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.background .container .user-info input {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 15px;
+    border: none;
+}
+
+.background .container .user-info input::placeholder {
+    font-family: "Cairo", sans-serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: black;
+}
+
+@media (max-width: 576px) {
+    .background .container .user-info input::placeholder {
+        font-size: 13px;
+    }
+}
+
+.background .container .user-info button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 6px;
+    height: 45px;
+    width: 95px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #0075ff;
+    font-family: "Cairo", sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Waves Animation & Styling */
+.background .waves>div {
+    position: absolute;
+    width: 100%;
+    min-height: 100px;
+    bottom: -10px;
+    left: 0;
+    background: url('../assets/wave.png');
+    background-size: 1000px 100px;
+}
+
+.background .waves #wave1 {
+    z-index: 10;
+    animation: waveAnimation 7s linear infinite;
+    animation-delay: -2s;
+}
+
+.background .waves #wave2 {
+    z-index: 9;
+    animation: waveAnimation 10s linear infinite;
+    animation-delay: -3s;
+    opacity: 80%;
+}
+
+.background .waves #wave3 {
+    z-index: 8;
+    animation: waveAnimation 13s linear infinite;
+    animation-delay: -4s;
+    opacity: 60%;
+}
+
+.background .waves #wave4 {
+    z-index: 7;
+    animation: waveAnimation 20s linear infinite;
+    animation-delay: -5s;
+    opacity: 40%;
+}
+
+@keyframes waveAnimation {
+    0% {
+        background-position-x: 0px;
+    }
+    100% {
+        background-position-x: 1000px;
+    }
+}
+
+/* Customisation Section Styling */
+.background .customing {
+    position: absolute;
+    right: 25%;
+    top: -300px;
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+}
+
+/* Media Query To Adjust Toolbar For Small Screens */
+@media (max-width: 799px) {
+    .background .customing {
+        right: 37%;
+    }
+}
+
+.background .customing .title {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    rotate: 180deg;
+    background-color: white;
+    padding: 5px 17px;
+    cursor: pointer;
+    position: absolute;
+    top: 298px;
+    right: -80px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.background .customing .title p {
+    font-weight: bold;
+    rotate: 180deg;
+}
+
+.background .customing .title i {
+    margin-right: 10px;
+    rotate: 180deg;
+}
+
+
+/* Color Table Styling */
+.background .customing .colors {
+    background-color: white;
+    position: absolute;
+    right: -125px;
+    top: 148px;
+    height: 150px;
+    width: 200px;
+    padding: 5px 12px;
+    border: 1px solid #ddd;
+    border-bottom-right-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -13px 15px;
+}
+
+.background .customing .colors .colors-table {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.background .customing .colors .colors-table span {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    border: 1px solid rgb(55, 55, 55);
+    cursor: pointer;
+}
+
+.background .customing .colors .colors-table .red {
+    background-color: #eb2632;
+}
+
+.background .customing .colors .colors-table .pink {
+    background-color: #f70776;
+}
+
+.background .customing .colors .colors-table .purple {
+    background-color: #6643b5;
+}
+
+.background .customing .colors .colors-table .orange {
+    background-color: #f96d00;
+}
+
+.background .customing .colors .colors-table .green {
+    background-color: #4ef037;
+}
+
+.background .customing .colors .colors-table .blue {
+    background-color: #0075ff;
+}
+
+.background .customing .colors .colors-table .yellow {
+    background-color: #ffc93c;
+}
+
+.background .customing .colors .colors-table .turq {
+    background-color: #35bcbf;
+}
+
+/* Font Table Styling */
+.background .customing .fonts {
+    background-color: white;
+    position: absolute;
+    right: -125px;
+    top: 0;
+    height: 150px;
+    width: 200px;
+    padding: 5px 12px;
+    border: 1px solid #ddd;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px -13px 15px;
+}
+
+.background .customing .fonts .selective-font {
+    padding: 0 10px;
+}
+
+/* ##################################### START JAVASCRIPT USED CLASSES ##################################### */
+.show {
+    display: none;
+}
+
+.slideRight { 
+    transform: translateY(150px);
+}
+
+.slideLeft {
+    transform: translateY(0);
+}
+
+.done {
+    opacity: 50%;
+    text-decoration: line-through;
+}
+/* ##################################### END JAVASCRIPT USED CLASSES ##################################### */

@@ -1,0 +1,189 @@
+/* THIS FILE WAS MADE TO SEPARATE THE CSS OF 'INDEX.HTML' FROM 'TASK-LIST.HTML' */
+/* THIS FILE ONLY CONTAINS THE ELEMENTS OF 'TASK-LIST.HTML' */
+
+/* Text & Time Styling */
+.background .container .home-btn {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    color: white;
+    top: 1%;
+    left: 30px;
+}
+
+.background .container .home-btn a {
+    text-decoration: none;
+    color: white;
+    margin-left: 5px;
+    font-weight: bold;
+}
+.background .container .text-time {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    padding: 15px;
+    color: white;
+    font-size: 15px;
+    text-align: center;
+    top: 10%;
+}
+
+/* For more spacing between words when using a Small Screen */
+@media (max-width: 992px) {
+    .background .container .text-time {
+        justify-content: space-between;
+    }
+}
+
+/* Task Input Styling */
+.background .container .task-input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    top: -7%;
+}
+
+.background .container .task-input input {
+    width: 100%;
+    padding: 20px 15px;
+    border-radius: 15px;
+    border: none;
+}
+
+.background .container .task-input input::placeholder {
+    font-family: "Cairo", sans-serif;
+    font-size: 17px;
+    letter-spacing: 1px;
+    color: black;
+}
+
+@media (max-width: 576px) {
+    .background .container .task-input input::placeholder {
+        font-size: 13px;
+    }
+}
+
+.background .container .task-input button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 6px;
+    height: 45px;
+    width: 95px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    background-color: #0075ff;
+    font-family: "Cairo", sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Task Title Styling */
+.background .container .task-title {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.background .container .task-title p {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.background .container .task-title::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 50%;
+    background-color: white;
+    top: 125%;
+}
+
+.background .container .task-title::after {
+    content: '';
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: white;
+    border: 2px solid white;
+    position: absolute;
+    top: 100%;
+    z-index: 1;
+}
+
+
+/* ######################################## Task List Styling ######################################## */
+.list-container {
+    width: 90%;
+    padding: 15px;
+    border-radius: 10px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 50%;
+    z-index: 10;
+}
+
+@media (max-width: 576px) {
+    .list-container {
+        margin-top: 15px;
+    }
+}
+
+.list-container ul li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 2px solid #ddddddbd;
+}
+
+.list-container ul li:not(:last-of-type) {
+    margin-bottom: 15px;
+}
+
+.list-container ul li p {
+    flex: 1;
+}
+
+.list-container ul li .icons {
+    display: flex;
+    border-left: 1px solid #ddd;
+    padding: 12px 5px 12px 10px;
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.list-container ul li .icons i {
+    cursor: pointer;
+    padding: 7px;
+    transition: 0.5s;
+}
+
+.list-container ul li .icons .fa-square-check:hover {
+    color: rgb(1, 225, 1);
+}
+
+.list-container ul li .icons .fa-trash-can:hover {
+    color: red;
+}
+
+.list-container ul li .icons .fa-pen-to-square:hover {
+    color: #0075ff;
+}
+
+@media (max-width: 576px) {
+    .list-container ul li .icons {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
